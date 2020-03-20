@@ -1,0 +1,14 @@
+{
+  "name": "coronavirus-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -rw sass -o dist/css/"
+  },
+  "author": "Adam Jankowski",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

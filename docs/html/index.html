@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <title>Coronavirus-Data</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="side-menu">
+        <span class="instruction">Search for a country</span>
+        <input type="text" name="" id="" class="country-input" value="China" />
+        <div class="side-menu-countries">
+          
+        </div>
+      </div>
+      <div class="chart-title-area">
+          <div class="chart-title">China</div>
+      </div>
+      <div class="chart-area">
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+      <div class="data-area">
+          <div class="data-tile">
+              <span >Day limit:</span>
+              <input type="text" name="" id="" class="day-limit-input" value="60">
+                
+            </div>
+            <div class="data-tile">
+                Check specific periods: 
+                <input type="checkbox" name="" id="" class="date-check">
+                <br>
+                <span>From: </span>
+                <input type="date" id="start" name="trip-start"
+                 value="2020-02-15"
+                 min="2020-02-01" 
+                 class="date-from">
+                 <br>
+                 <span>To: </span>
+                <input type="date" id="start" name="trip-start"
+                 value="2020-03-15"
+                 min="2020-02-01"
+                 class="date-to" >
+            </div>
+        <!-- <div class="data-tile">
+          <div class="data-tile-bottom">
+            <p>Infected:</p>
+            <span class="data-count data-tile-bottom-infected-count">10</span>
+          </div>
+        </div>
+        <div class="data-tile">
+          <div class="data-tile-bottom">
+            <p>Recovered:</p>
+            <span class="data-count data-tile-bottom-rescued-count">10</span>
+          </div>
+        </div>
+        <div class="data-tile">
+          <div class="data-tile-bottom">
+            <p>Deaths:</p>
+            <span class="data-count data-tile-bottom-deaths-count">10</span>
+          </div>
+        </div> -->
+      </div>
+      <footer class="main-footer">
+        Take care of yourselves &copy; Website by Adam Jankowski
+      </footer>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

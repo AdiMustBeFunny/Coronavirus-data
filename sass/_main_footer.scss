@@ -1,0 +1,10 @@
+.main-footer{
+    grid-column:1/5 ;
+    grid-row: 20/21;
+    background: $dark-color-2;
+    color: $text-color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}

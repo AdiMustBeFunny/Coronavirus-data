@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0; }
+
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(20, 1fr);
+  overflow: hidden; }
+
+.side-menu {
+  grid-column: 1/2;
+  grid-row: 1/20;
+  background-image: linear-gradient(#333, #1E1E21); }
+  .side-menu input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: block;
+    width: 50%;
+    font-size: 1.8rem;
+    padding: 15px 15px;
+    border-bottom: 2px solid #CCCCB1;
+    background-color: #333;
+    color: #CCCCB1;
+    text-align: center; }
+  .side-menu span.instruction {
+    color: #CCCCB1;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    font-size: 1.2rem; }
+
+.side-menu-countries {
+  margin: 10px;
+  margin-top: 30px;
+  color: #b3b293;
+  line-height: 1.3; }
+  .side-menu-countries .country-name {
+    font-size: 2rem;
+    display: block; }
+  .side-menu-countries-entry {
+    padding: 15px;
+    margin-bottom: 5px;
+    background: #373741;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #373741; }
+    .side-menu-countries-entry .left {
+      text-align: center; }
+    .side-menu-countries-entry:hover {
+      border: 2px solid #007ADC;
+      cursor: pointer; }
+
+.chart-title-area {
+  grid-column: 2/5;
+  grid-row: 1/2;
+  background-color: #1E1E21;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .chart-title-area .chart-title {
+    color: #CCCCB1;
+    font-size: 1.5rem; }
+
+.chart-area {
+  grid-column: 2/5;
+  grid-row: 2/16;
+  background: #CCCCB1; }
+
+.chart-container {
+  width: 95%;
+  height: 95%;
+  margin: auto; }
+
+.data-area {
+  grid-column: 2/5;
+  grid-row: 16/20;
+  background: #333;
+  display: flex;
+  color: #CCCCB1; }
+
+.data-tile {
+  font-size: 1.2rem;
+  padding: 15px;
+  text-align: center; }
+  .data-tile .day-limit-input {
+    padding: 5px;
+    border-bottom: 2px solid #CCCCB1;
+    background-color: #373741;
+    color: #CCCCB1;
+    text-align: center;
+    font-size: 1.2rem; }
+  .data-tile .date-from, .data-tile .date-to {
+    padding: 5px;
+    border-bottom: 2px solid #CCCCB1;
+    background-color: #373741;
+    color: #CCCCB1;
+    text-align: center;
+    font-size: 1.2rem; }
+
+.main-footer {
+  grid-column: 1/5;
+  grid-row: 20/21;
+  background: #252531;
+  color: #CCCCB1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem; }
+
+@media (max-width: 1024px) {
+  .side-menu-countries-entry {
+    grid-template-columns: 1fr;
+    text-align: center; }
+  .side-menu input {
+    width: 100%; } }

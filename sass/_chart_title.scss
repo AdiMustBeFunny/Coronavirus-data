@@ -1,0 +1,16 @@
+
+.chart-title-area{
+    grid-column:2/5 ;
+    grid-row: 1/2;
+    background-color: $dark-color-1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .chart-title{
+        color: $text-color-white;
+        font-size: 1.5rem;
+    }
+}
+
