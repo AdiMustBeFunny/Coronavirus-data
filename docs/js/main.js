@@ -270,7 +270,7 @@ function check_specific_date_check(){
 function refresh_country_list(){
     let country_name = country_input.value.toLowerCase(); 
 
-    let permitted_characters = "abcdefghijklmnoupqrstuvwxyz";
+    let permitted_characters = "abcdefghijklmnoupqrstuvwxyz ";
     
     for(let i =0;i<country_name.length;i++)
     {
