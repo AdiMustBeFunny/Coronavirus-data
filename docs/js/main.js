@@ -242,6 +242,12 @@ day_limit_element.addEventListener('input',()=>{
 })
 
 country_input.addEventListener('input',refresh_country_list)
+country_input.addEventListener('focus',()=>{
+    country_input.select()
+})
+country_input.addEventListener('click',()=>{
+    country_input.select()
+})
 
 check_specific_date_elememt.addEventListener('change',()=>{
     check_specific_date_check()
