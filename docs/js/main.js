@@ -198,7 +198,6 @@ function create_chart()
     canvas = document.getElementById('myChart');
     ctx = canvas.getContext('2d');
 
-    console.log(current_country)
     chart = null;
     chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -215,17 +214,7 @@ function create_chart()
     });
 }
 
-// function update_labels()
-// {
-//     let data_to_be_shown = country_data
-//     .filter(country=>country.name === current_country)[0].data;
 
-//     let last_element = data_to_be_shown[data_to_be_shown.length-1];
-
-//     dead_count_element.innerHTML = last_element.deaths;
-//     rescued_count_element.innerHTML = last_element.recovered;
-//     infected_count_element.innerHTML = last_element.confirmed;
-// }
 function set_day_limit(){
     let permitted_characters = "1234567890";
 
@@ -235,7 +224,6 @@ function set_day_limit(){
     {
         if(permitted_characters.indexOf(day_limit[i]) == -1)
             {
-                console.log('Forbidden character')
                 return;
             }
     }
@@ -288,7 +276,6 @@ function refresh_country_list(){
     {
         if(permitted_characters.indexOf(country_name[i]) == -1)
         {
-            console.log('Bad character');
             return;
         }
     }
@@ -296,9 +283,7 @@ function refresh_country_list(){
     let countries_with_input_substring = country_data
     .filter(country=>country.name.toLowerCase().indexOf(country_name)!=-1)
 
-// console.log("--------")
-//     countries_with_input_substring
-//     .forEach(country=>console.log(country.name))
+
 
     country_entry_list.innerHTML="";
 
@@ -331,7 +316,6 @@ function refresh_country_list(){
     if(country.name.toLowerCase()===country_name.toLowerCase())
     {
         current_country = country_name
-        // console.log('Full match')
         chart_title.innerHTML = country.name;
         create_chart()
     }
@@ -342,7 +326,6 @@ function refresh_country_list(){
 
 function country_entry_onclick(elem)
 {
-    console.log('onclick')
     country_input.value=elem.querySelector('.country-name').innerHTML;
     refresh_country_list()
 }
@@ -351,10 +334,7 @@ function country_entry_onclick(elem)
 fetch("https://pomber.github.io/covid19/timeseries.json")
   .then(response => response.json())
   .then(data => {
-    // data["Argentina"].forEach(({ date, confirmed, recovered, deaths }) =>{
-    //   console.log(`${date} active cases: ${confirmed - recovered - deaths}`)
-    // }
-    // )
+   
     
     let available_countries = Object.keys(data);
     available_countries.forEach(country=>{
@@ -365,7 +345,6 @@ fetch("https://pomber.github.io/covid19/timeseries.json")
         {
             if(confirmed!=0)
             new_country.data.push({date,confirmed,recovered,deaths})
-            // console.log(`${date} active cases: ${confirmed - recovered - deaths}`)
         })
         
         country_data.push(new_country);
@@ -374,7 +353,6 @@ fetch("https://pomber.github.io/covid19/timeseries.json")
     set_day_limit()
     refresh_country_list()
     create_chart()
-    // update_labels()
 
 })
 
