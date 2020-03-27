@@ -36,6 +36,8 @@
     margin-top: 30px;
     color: $text-color-white-dark;
     line-height: 1.3;
+    max-height: 70vh;
+    overflow: auto;
     .country-name{
         font-size: 2rem;
         display: block;
